@@ -1,9 +1,11 @@
 import React from 'react';
+import WeatherReport from './components/WeatherReport';
 
 const App = () => {
   return (
     <div>
-      <h1>This is a test</h1>
+      <h1>Current Weather</h1>
+      <WeatherReport />
     </div>
   );
 };

@@ -1,0 +1,146 @@
+{
+  "documentation": "https://opencagedata.com/api",
+  "licenses": [
+    {
+      "name": "see attribution guide",
+      "url": "https://opencagedata.com/credits"
+    }
+  ],
+  "rate": {
+    "limit": 2500,
+    "remaining": 2497,
+    "reset": 1640736000
+  },
+  "results": [
+    {
+      "annotations": {
+        "DMS": {
+          "lat": "59° 24' 41.00328'' N",
+          "lng": "17° 55' 29.79264'' E"
+        },
+        "MGRS": "33VXF6600189510",
+        "Maidenhead": "JO89xj08xr",
+        "Mercator": {
+          "x": 1995395.461,
+          "y": 8233023.355
+        },
+        "OSM": {
+          "edit_url": "https://www.openstreetmap.org/edit?way=813467675#map=17/59.41139/17.92494",
+          "note_url": "https://www.openstreetmap.org/note/new#map=17/59.41139/17.92494&layers=N",
+          "url": "https://www.openstreetmap.org/?mlat=59.41139&mlon=17.92494#map=17/59.41139/17.92494"
+        },
+        "UN_M49": {
+          "regions": {
+            "EUROPE": "150",
+            "NORTHERN_EUROPE": "154",
+            "SE": "752",
+            "WORLD": "001"
+          },
+          "statistical_groupings": [
+            "MEDC"
+          ]
+        },
+        "callingcode": 46,
+        "currency": {
+          "alternate_symbols": [
+            ":-"
+          ],
+          "decimal_mark": ",",
+          "disambiguate_symbol": "SEK",
+          "format": "%n %u",
+          "html_entity": "",
+          "iso_code": "SEK",
+          "iso_numeric": "752",
+          "name": "Swedish Krona",
+          "smallest_denomination": 100,
+          "subunit": "Öre",
+          "subunit_to_unit": 100,
+          "symbol": "kr",
+          "symbol_first": 0,
+          "thousands_separator": " "
+        },
+        "flag": "🇸🇪",
+        "geohash": "u6s9zzs83mvb9wh6um8j",
+        "qibla": 148.09,
+        "roadinfo": {
+          "drive_on": "right",
+          "road": "Norgegatan",
+          "road_type": "tertiary",
+          "speed_in": "km/h"
+        },
+        "sun": {
+          "rise": {
+            "apparent": 1640677620,
+            "astronomical": 1640667960,
+            "civil": 1640674260,
+            "nautical": 1640670960
+          },
+          "set": {
+            "apparent": 1640699580,
+            "astronomical": 1640709240,
+            "civil": 1640702880,
+            "nautical": 1640706240
+          }
+        },
+        "timezone": {
+          "name": "Europe/Stockholm",
+          "now_in_dst": 0,
+          "offset_sec": 3600,
+          "offset_string": "+0100",
+          "short_name": "CET"
+        },
+        "what3words": {
+          "words": "dabbing.marathon.sculpture"
+        }
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 59.4122766,
+          "lng": 17.9261463
+        },
+        "southwest": {
+          "lat": 59.4109046,
+          "lng": 17.9227269
+        }
+      },
+      "components": {
+        "ISO_3166-1_alpha-2": "SE",
+        "ISO_3166-1_alpha-3": "SWE",
+        "_category": "road",
+        "_type": "road",
+        "city": "Paradise City",
+        "city_district": "Rinkeby-Kista stadsdelsområde",
+        "continent": "Europe",
+        "country": "Sweden",
+        "country_code": "se",
+        "county": "Stockholm County",
+        "municipality": "Stockholms kommun",
+        "political_union": "European Union",
+        "postcode": "164 32",
+        "road": "Norgegatan",
+        "road_type": "tertiary",
+        "suburb": "Husby"
+      },
+      "confidence": 9,
+      "formatted": "Norgegatan, 164 32 Stockholm, Sweden",
+      "geometry": {
+        "lat": 59.4113898,
+        "lng": 17.9249424
+      }
+    }
+  ],
+  "status": {
+    "code": 200,
+    "message": "OK"
+  },
+  "stay_informed": {
+    "blog": "https://blog.opencagedata.com",
+    "twitter": "https://twitter.com/OpenCage"
+  },
+  "thanks": "For using an OpenCage API",
+  "timestamp": {
+    "created_http": "Tue, 28 Dec 2021 18:29:33 GMT",
+    "created_unix": 1640716173
+  },
+  "total_results": 1
+}

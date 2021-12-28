@@ -1,5 +1,8 @@
 describe('User visiting the application, can see home view', () => {
   before(() => {
+    cy.intercept('https://api.opencagedata.com/geocode/v1/json**', {
+      fixture: 'openCageResponse.json'
+    });
     cy.visit('/', {
       onBeforeLoad(window) {
         const stubLocation = {
@@ -20,15 +23,9 @@ describe('User visiting the application, can see home view', () => {
     cy.get('h1').should('contain.text', 'Current Weather');
   });
 
-  describe('display user coordinates', () => {
-    it('is expected to display latitude', () => {
-      cy.get('[data-cy=user-latitude]')
-        .should('contain.text', 'Your latitude is: 59.4116812');
-    });
-
-    it('is expected to display latitude', () => {
-      cy.get('[data-cy=user-longitude]')
-        .should('contain.text', 'Your longitude is: 17.9250757');
+  describe("displays current weather based on user's location", () => {
+    it('is expected to display city "Paradise City"', () => {
+      cy.get('[data-cy=weather-city]').should('contain.text', 'Paradise City');
     });
   });
 });

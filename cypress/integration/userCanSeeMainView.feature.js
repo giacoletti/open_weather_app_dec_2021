@@ -1,6 +1,19 @@
 describe('User visiting the application, can see home view', () => {
   before(() => {
-    cy.visit('/');
+    cy.visit('/', {
+      onBeforeLoad(window) {
+        const stubLocation = {
+          coords: {
+            latitude: 59.4116812,
+            longitude: 17.9250757
+          }
+        };
+        cy.stub(window.navigator.geolocation, 'getCurrentPosition')
+          .callsFake((callback) => {
+            return callback(stubLocation);
+          });
+      }
+    });
   });
 
   it('is expected to display header "Current Weather"', () => {

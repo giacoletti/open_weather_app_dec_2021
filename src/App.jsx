@@ -1,12 +1,13 @@
 import React from 'react';
 import WeatherReport from './components/WeatherReport';
+import { Container } from 'react-bootstrap';
 
 const App = () => {
   return (
-    <div>
+    <Container className="mt-4">
       <h1>Current Weather</h1>
       <WeatherReport />
-    </div>
+    </Container>
   );
 };
 

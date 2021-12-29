@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Geolocation from '../modules/Geolocation';
 import OpenCageAPI from '../modules/OpenCageAPI';
 import OpenWeatherAPI from '../modules/OpenWeatherAPI';
-import { Card, Image } from 'react-bootstrap';
+import { Card, Image, Badge } from 'react-bootstrap';
 import { Thermometer, HouseFill } from 'react-bootstrap-icons';
 
 const WeatherReport = () => {
@@ -53,14 +53,14 @@ const WeatherReport = () => {
 
   return (
     <Card
-      style={{ width: '18rem' }}
+      style={{ width: '20rem' }}
       className="shadow p-2 mb-5 bg-body rounded"
     >
       <Card.Body>
-        <Card.Title data-cy="weather-city">
-          <HouseFill />
+        <h4 data-cy="weather-city">
+          <Badge pill bg="light" text="dark"><HouseFill /></Badge>
           &nbsp;{weatherInfo.city}
-        </Card.Title>
+        </h4>
         <Card.Title><Image src={weatherInfo.icon} />{weatherInfo.description}</Card.Title>
         <Card.Title data-cy="weather-temperature">
           <Thermometer />

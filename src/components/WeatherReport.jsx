@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Geolocation from '../modules/Geolocation';
 import OpenCageAPI from '../modules/OpenCageAPI';
+import OpenWeatherAPI from '../modules/OpenWeatherAPI';
 
 const WeatherReport = () => {
   const [weatherInfo, setWeatherInfo] = useState({});
 
-  const getUserLocation = async () => {
+  const getUserLocationAndWeather = async () => {
+    let city, temperature;
     const geolocationResponse = await Geolocation.getCoordinates();
     if (geolocationResponse.latitude) {
       const openCageResponse = await OpenCageAPI.getCity(
@@ -14,20 +16,32 @@ const WeatherReport = () => {
       );
 
       if (openCageResponse.hamlet) {
-        setWeatherInfo({ city: openCageResponse.hamlet });
+        city = openCageResponse.hamlet;
       } else {
-        setWeatherInfo({ city: openCageResponse.city });
+        city = openCageResponse.city;
       }
+
+      const openWeatherResponse = await OpenWeatherAPI.getCurrentAndForecastWeather(
+        geolocationResponse.latitude,
+        geolocationResponse.longitude
+      );
+
+      if (openWeatherResponse.current) {
+        temperature = parseFloat(openWeatherResponse.current.temp.toFixed(1));
+        temperature = `${temperature}°C`;
+      }
+      setWeatherInfo({ city: city, temperature: temperature });
     }
   };
 
   useEffect(() => {
-    getUserLocation();
+    getUserLocationAndWeather();
   }, []);
 
   return (
     <div>
       <h2 data-cy="weather-city">{weatherInfo.city}</h2>
+      <h2 data-cy="weather-temperature">{weatherInfo.temperature}</h2>
     </div>
   );
 };

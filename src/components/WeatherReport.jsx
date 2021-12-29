@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import Geolocation from '../modules/Geolocation';
 import OpenCageAPI from '../modules/OpenCageAPI';
 import OpenWeatherAPI from '../modules/OpenWeatherAPI';
+import { Card, Image } from 'react-bootstrap';
+import { Thermometer, HouseFill } from 'react-bootstrap-icons';
 
 const WeatherReport = () => {
   const [weatherInfo, setWeatherInfo] = useState({});
 
   const getUserLocationAndWeather = async () => {
-    let city, temperature;
+    let city, temperature, icon, description;
     const geolocationResponse = await Geolocation.getCoordinates();
     if (geolocationResponse.latitude) {
       const openCageResponse = await OpenCageAPI.getCity(
@@ -29,8 +31,19 @@ const WeatherReport = () => {
       if (openWeatherResponse.current) {
         temperature = parseFloat(openWeatherResponse.current.temp.toFixed(1));
         temperature = `${temperature}°C`;
+        icon =
+          'https://openweathermap.org/img/wn/' +
+          openWeatherResponse.current.weather[0].icon +
+          '.png';
+        description = openWeatherResponse.current.weather[0].description;
+        description = description.charAt(0).toUpperCase() + description.slice(1);
       }
-      setWeatherInfo({ city: city, temperature: temperature });
+      setWeatherInfo({
+        city,
+        temperature,
+        icon,
+        description
+      });
     }
   };
 
@@ -39,10 +52,22 @@ const WeatherReport = () => {
   }, []);
 
   return (
-    <div>
-      <h2 data-cy="weather-city">{weatherInfo.city}</h2>
-      <h2 data-cy="weather-temperature">{weatherInfo.temperature}</h2>
-    </div>
+    <Card
+      style={{ width: '18rem' }}
+      className="shadow p-2 mb-5 bg-body rounded"
+    >
+      <Card.Body>
+        <Card.Title data-cy="weather-city">
+          <HouseFill />
+          &nbsp;{weatherInfo.city}
+        </Card.Title>
+        <Card.Title><Image src={weatherInfo.icon} />{weatherInfo.description}</Card.Title>
+        <Card.Title data-cy="weather-temperature">
+          <Thermometer />
+          {weatherInfo.temperature}
+        </Card.Title>
+      </Card.Body>
+    </Card>
   );
 };
 

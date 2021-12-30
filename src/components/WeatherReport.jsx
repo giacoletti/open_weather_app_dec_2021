@@ -8,7 +8,8 @@ import {
   CardContent,
   Typography,
   Avatar,
-  Grid
+  Grid,
+  CircularProgress
 } from '@mui/material';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import ThermostatIcon from '@mui/icons-material/Thermostat';
@@ -61,42 +62,49 @@ const WeatherReport = () => {
 
   return (
     <Card sx={{ maxWidth: 345, boxShadow: 3 }}>
-      <CardHeader
-        data-cy="weather-city"
-        avatar={
-          <Avatar aria-label="city">
-            <LocationCityIcon />
-          </Avatar>
-        }
-        title={
-          <h1
-            data-cy="weather-city"
-            style={{ fontWeight: 400 }}
-          >
-            {weatherInfo.city}
-          </h1>
-        }
-      />
-      <CardContent>
-        <Grid container alignItems="center">
-          <Grid item xs="auto">
-            <img src={weatherInfo.icon} alt="" />
+      {!weatherInfo.city ? (
+        <CardHeader title={<CircularProgress />} />
+      ) : (
+        <CardHeader
+          data-cy="weather-city"
+          avatar={
+            <Avatar aria-label="city">
+              <LocationCityIcon />
+            </Avatar>
+          }
+          title={
+            <h1 data-cy="weather-city" style={{ fontWeight: 400 }}>
+              {weatherInfo.city}
+            </h1>
+          }
+        />
+      )}
+      {!weatherInfo.temperature ? (
+        <CardContent>
+          <CircularProgress />
+        </CardContent>
+      ) : (
+        <CardContent>
+          <Grid container alignItems="center">
+            <Grid item xs="auto">
+              <img src={weatherInfo.icon} alt="" />
+            </Grid>
+            <Grid item xs>
+              <Typography variant="h5" component="div">
+                {weatherInfo.description}
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid item xs>
-            <Typography variant="h5" component="div">
-             {weatherInfo.description}
-            </Typography>
+          <Grid container alignItems="center">
+            <Grid item xs="auto">
+              <ThermostatIcon />
+            </Grid>
+            <Grid item xs>
+              <h3 data-cy="weather-temperature">{weatherInfo.temperature}</h3>
+            </Grid>
           </Grid>
-        </Grid>
-        <Grid container alignItems="center">
-          <Grid item xs="auto">
-            <ThermostatIcon />
-          </Grid>
-          <Grid item xs>
-            <h3 data-cy="weather-temperature">{weatherInfo.temperature}</h3>
-          </Grid>
-        </Grid>
-      </CardContent>
+        </CardContent>
+      )}
     </Card>
   );
 };

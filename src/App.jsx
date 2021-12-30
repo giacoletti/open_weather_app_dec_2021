@@ -1,11 +1,11 @@
 import React from 'react';
 import WeatherReport from './components/WeatherReport';
-import { Container } from 'react-bootstrap';
+import { Container } from '@mui/material';
 
 const App = () => {
   return (
-    <Container className="mt-4">
-      <h1 className="mb-3">Current Weather</h1>
+    <Container>
+      <h1>Current Weather</h1>
       <WeatherReport />
     </Container>
   );

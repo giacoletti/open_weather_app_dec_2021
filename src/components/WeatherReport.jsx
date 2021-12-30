@@ -2,8 +2,16 @@ import React, { useEffect, useState } from 'react';
 import Geolocation from '../modules/Geolocation';
 import OpenCageAPI from '../modules/OpenCageAPI';
 import OpenWeatherAPI from '../modules/OpenWeatherAPI';
-import { Card, Image, Badge } from 'react-bootstrap';
-import { Thermometer, HouseFill } from 'react-bootstrap-icons';
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  Typography,
+  Avatar,
+  Grid
+} from '@mui/material';
+import LocationCityIcon from '@mui/icons-material/LocationCity';
+import ThermostatIcon from '@mui/icons-material/Thermostat';
 
 const WeatherReport = () => {
   const [weatherInfo, setWeatherInfo] = useState({});
@@ -52,21 +60,43 @@ const WeatherReport = () => {
   }, []);
 
   return (
-    <Card
-      style={{ width: '20rem' }}
-      className="shadow p-2 mb-5 bg-body rounded"
-    >
-      <Card.Body>
-        <h4 data-cy="weather-city">
-          <Badge pill bg="light" text="dark"><HouseFill /></Badge>
-          &nbsp;{weatherInfo.city}
-        </h4>
-        <Card.Title><Image src={weatherInfo.icon} />{weatherInfo.description}</Card.Title>
-        <Card.Title data-cy="weather-temperature">
-          <Thermometer />
-          {weatherInfo.temperature}
-        </Card.Title>
-      </Card.Body>
+    <Card sx={{ maxWidth: 345, boxShadow: 3 }}>
+      <CardHeader
+        data-cy="weather-city"
+        avatar={
+          <Avatar aria-label="city">
+            <LocationCityIcon />
+          </Avatar>
+        }
+        title={
+          <h1
+            data-cy="weather-city"
+            style={{ fontWeight: 400 }}
+          >
+            {weatherInfo.city}
+          </h1>
+        }
+      />
+      <CardContent>
+        <Grid container alignItems="center">
+          <Grid item xs="auto">
+            <img src={weatherInfo.icon} alt="" />
+          </Grid>
+          <Grid item xs>
+            <Typography variant="h5" component="div">
+             {weatherInfo.description}
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid container alignItems="center">
+          <Grid item xs="auto">
+            <ThermostatIcon />
+          </Grid>
+          <Grid item xs>
+            <h3 data-cy="weather-temperature">{weatherInfo.temperature}</h3>
+          </Grid>
+        </Grid>
+      </CardContent>
     </Card>
   );
 };

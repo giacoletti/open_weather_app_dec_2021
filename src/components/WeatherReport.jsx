@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Geolocation from '../modules/Geolocation';
 import OpenCageAPI from '../modules/OpenCageAPI';
 import OpenWeatherAPI from '../modules/OpenWeatherAPI';
+import TimeParser from '../modules/TimeParser';
 import {
   Card,
   CardHeader,
@@ -18,7 +19,7 @@ const WeatherReport = () => {
   const [weatherInfo, setWeatherInfo] = useState({});
 
   const getUserLocationAndWeather = async () => {
-    let city, temperature, icon, description;
+    let city, temperature, icon, description, updateTime;
     const geolocationResponse = await Geolocation.getCoordinates();
     if (geolocationResponse.latitude) {
       const openCageResponse = await OpenCageAPI.getCity(
@@ -38,6 +39,7 @@ const WeatherReport = () => {
       );
 
       if (openWeatherResponse.current) {
+        updateTime = TimeParser.unixToClockTime(openWeatherResponse.current.dt);
         temperature = parseFloat(openWeatherResponse.current.temp.toFixed(1));
         temperature = `${temperature}°C`;
         icon =
@@ -48,6 +50,7 @@ const WeatherReport = () => {
         description = description.charAt(0).toUpperCase() + description.slice(1);
       }
       setWeatherInfo({
+        updateTime,
         city,
         temperature,
         icon,
@@ -65,19 +68,24 @@ const WeatherReport = () => {
       {!weatherInfo.city ? (
         <CardHeader title={<CircularProgress />} />
       ) : (
-        <CardHeader
-          data-cy="weather-city"
-          avatar={
-            <Avatar aria-label="city">
-              <LocationCityIcon />
-            </Avatar>
-          }
-          title={
-            <h1 data-cy="weather-city" style={{ fontWeight: 400 }}>
-              {weatherInfo.city}
-            </h1>
-          }
-        />
+        <>
+          <Typography variant="caption" display="block" align="right" sx={{ paddingRight: '5px' }}>
+            {weatherInfo.updateTime}
+          </Typography>
+          <CardHeader
+            data-cy="weather-city"
+            avatar={
+              <Avatar aria-label="city">
+                <LocationCityIcon />
+              </Avatar>
+            }
+            title={
+              <h1 data-cy="weather-city" style={{ fontWeight: 400 }}>
+                {weatherInfo.city}
+              </h1>
+            }
+          />
+        </>
       )}
       {!weatherInfo.temperature ? (
         <CardContent>

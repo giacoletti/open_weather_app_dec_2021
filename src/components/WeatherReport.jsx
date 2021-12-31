@@ -5,7 +5,6 @@ import OpenWeatherAPI from '../modules/OpenWeatherAPI';
 import TimeParser from '../modules/TimeParser';
 import {
   Card,
-  CardHeader,
   CardContent,
   Typography,
   Avatar,
@@ -65,34 +64,36 @@ const WeatherReport = () => {
 
   return (
     <Card sx={{ maxWidth: 345, boxShadow: 3 }}>
+      <CardContent>
       {!weatherInfo.city ? (
-        <CardHeader title={<CircularProgress />} />
+        <Grid>
+          <CircularProgress />
+        </Grid>
       ) : (
         <>
-          <Typography variant="caption" display="block" align="right" sx={{ paddingRight: '5px' }}>
+          <Typography variant="caption" display="block" align="right">
             {weatherInfo.updateTime}
           </Typography>
-          <CardHeader
-            data-cy="weather-city"
-            avatar={
+          <Grid container alignItems="center">
+            <Grid item xs="auto">
               <Avatar aria-label="city">
                 <LocationCityIcon />
               </Avatar>
-            }
-            title={
+            </Grid>
+            <Grid item xs sx={{ paddingLeft: '5px' }}>
               <h1 data-cy="weather-city" style={{ fontWeight: 400 }}>
-                {weatherInfo.city}
+               {weatherInfo.city}
               </h1>
-            }
-          />
+            </Grid>
+          </Grid>
         </>
       )}
       {!weatherInfo.temperature ? (
-        <CardContent>
+        <Grid>
           <CircularProgress />
-        </CardContent>
+        </Grid>
       ) : (
-        <CardContent>
+        <>
           <Grid container alignItems="center">
             <Grid item xs="auto">
               <img src={weatherInfo.icon} alt="" />
@@ -111,8 +112,9 @@ const WeatherReport = () => {
               <h3 data-cy="weather-temperature">{weatherInfo.temperature}</h3>
             </Grid>
           </Grid>
-        </CardContent>
+        </>
       )}
+      </CardContent>
     </Card>
   );
 };

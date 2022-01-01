@@ -37,8 +37,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Acknowledgements
 
-[Convert a Unix Timestamp to a Date in Vanilla JavaScript](https://coderrocketfuel.com/article/convert-a-unix-timestamp-to-a-date-in-vanilla-javascript)
-[Thomas](https://github.com/tochman)
+- [Convert a Unix Timestamp to a Date in Vanilla JavaScript](https://coderrocketfuel.com/article/convert-a-unix-timestamp-to-a-date-in-vanilla-javascript)
+- [Thomas](https://github.com/tochman)
 
 ## License
 

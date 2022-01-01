@@ -1,6 +1,21 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Weather App built using the following APIs:
+- [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
+- [OpenCage Geocoding API](https://opencagedata.com/)
+- [OpenWeather API](https://openweathermap.org/api)
+
+## Deployment
+
+WIP
+
+## Dependencies
+
+- Node.js
+- React.js
+- [Axios](https://axios-http.com/)
+- [Material UI](https://mui.com/)
+- [yarn](https://classic.yarnpkg.com/en/)
 
 ## Available Scripts
 
@@ -28,12 +43,6 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Acknowledgements
 

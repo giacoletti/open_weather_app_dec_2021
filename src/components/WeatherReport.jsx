@@ -41,8 +41,7 @@ const WeatherReport = () => {
         updateTime = TimeParser.unixToClockTime(openWeatherResponse.current.dt);
         temperature = parseFloat(openWeatherResponse.current.temp.toFixed(1));
         temperature = `${temperature}°C`;
-        icon =
-          'https://openweathermap.org/img/wn/' +
+        icon = 'https://openweathermap.org/img/wn/' +
           openWeatherResponse.current.weather[0].icon +
           '.png';
         description = openWeatherResponse.current.weather[0].description;

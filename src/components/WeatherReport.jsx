@@ -9,7 +9,8 @@ import {
   Typography,
   Avatar,
   Grid,
-  CircularProgress
+  CircularProgress,
+  Chip
 } from '@mui/material';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import ThermostatIcon from '@mui/icons-material/Thermostat';
@@ -17,8 +18,13 @@ import ThermostatIcon from '@mui/icons-material/Thermostat';
 const WeatherReport = () => {
   const [weatherInfo, setWeatherInfo] = useState({});
 
+  const parseTemperature = (temp) => {
+    const temperature = parseFloat(temp.toFixed(1));
+    return `${temperature}°C`;
+  }
+
   const getUserLocationAndWeather = async () => {
-    let city, temperature, icon, description, updateTime;
+    let city, temperature, feelsLike, icon, description, updateTime;
     const geolocationResponse = await Geolocation.getCoordinates();
     if (geolocationResponse.latitude) {
       const openCageResponse = await OpenCageAPI.getCity(
@@ -39,8 +45,8 @@ const WeatherReport = () => {
 
       if (openWeatherResponse.current) {
         updateTime = TimeParser.unixToClockTime(openWeatherResponse.current.dt);
-        temperature = parseFloat(openWeatherResponse.current.temp.toFixed(1));
-        temperature = `${temperature}°C`;
+        temperature = parseTemperature(openWeatherResponse.current.temp);
+        feelsLike = parseTemperature(openWeatherResponse.current.feels_like);
         icon = 'https://openweathermap.org/img/wn/' +
           openWeatherResponse.current.weather[0].icon +
           '.png';
@@ -51,6 +57,7 @@ const WeatherReport = () => {
         updateTime,
         city,
         temperature,
+        feelsLike,
         icon,
         description
       });
@@ -108,7 +115,9 @@ const WeatherReport = () => {
               <ThermostatIcon data-cy="temperature-icon"/>
             </Grid>
             <Grid item xs>
-              <h3 data-cy="weather-temperature">{weatherInfo.temperature}</h3>
+              <h3 data-cy="weather-temperature">
+                {weatherInfo.temperature} <Chip data-cy="weather-feels-like" label={`Feels like: ${weatherInfo.feelsLike}`} />
+              </h3>
             </Grid>
           </Grid>
         </>

@@ -54,5 +54,11 @@ describe('User visiting the application, can see home view', () => {
         .should('contain.text', '0.1°C')
         .and('be.visible');
     });
+
+    it("is expected to display 'Feels like' temperature", () => {
+      cy.get('[data-cy=weather-feels-like]')
+        .should('contain.text', 'Feels like: 0°C')
+        .and('be.visible');
+    });
   });
 });

@@ -1,11 +1,11 @@
 describe('User visiting the application, can see home view', () => {
   before(() => {
     cy.intercept('GET', 'https://api.opencagedata.com/geocode/v1/json**', {
-      fixture: 'openCageResponse.json'
-    }).as('getCity');
+        fixture: 'openCageResponse.json'
+      }).as('getCity');
     cy.intercept('GET', 'https://api.openweathermap.org/data/2.5/onecall**', {
-      fixture: 'openWeatherResponse.json'
-    }).as('getWeather');
+        fixture: 'openWeatherResponse.json'
+      }).as('getWeather');
     cy.visit('/', {
       onBeforeLoad(window) {
         const stubLocation = {
@@ -30,11 +30,29 @@ describe('User visiting the application, can see home view', () => {
 
   describe("displays current weather based on user's location", () => {
     it('is expected to display city "Paradise City"', () => {
-      cy.get('[data-cy=weather-city]').should('contain.text', 'Paradise City');
+      cy.get('[data-cy=weather-city]')
+        .should('contain.text', 'Paradise City')
+        .and('be.visible');
+    });
+
+    it('is expected to display weather icon', () => {
+      cy.get('[data-cy=weather-icon]').should('be.visible');
+    });
+
+    it('is expected to display weather description', () => {
+      cy.get('[data-cy=weather-description]')
+        .should('contain.text', 'Light snow')
+        .and('be.visible');
+    });
+
+    it('is expected to display temperature icon', () => {
+      cy.get('[data-cy=temperature-icon]').should('be.visible');
     });
 
     it('is expected to display temperature in Celsius', () => {
-      cy.get('[data-cy=weather-temperature]').should('contain.text', '0.1°C');
+      cy.get('[data-cy=weather-temperature]')
+        .should('contain.text', '0.1°C')
+        .and('be.visible');
     });
   });
 });

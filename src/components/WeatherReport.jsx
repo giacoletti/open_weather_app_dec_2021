@@ -96,17 +96,17 @@ const WeatherReport = () => {
         <>
           <Grid container alignItems="center">
             <Grid item xs="auto">
-              <img src={weatherInfo.icon} alt="" />
+              <img data-cy="weather-icon" src={weatherInfo.icon} alt="" />
             </Grid>
             <Grid item xs>
-              <Typography variant="h5" component="div">
+              <Typography data-cy="weather-description" variant="h5" component="div">
                 {weatherInfo.description}
               </Typography>
             </Grid>
           </Grid>
           <Grid container alignItems="center">
             <Grid item xs="auto">
-              <ThermostatIcon />
+              <ThermostatIcon data-cy="temperature-icon"/>
             </Grid>
             <Grid item xs>
               <h3 data-cy="weather-temperature">{weatherInfo.temperature}</h3>

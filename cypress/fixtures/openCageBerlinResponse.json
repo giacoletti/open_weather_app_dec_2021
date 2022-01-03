@@ -1,0 +1,1156 @@
+{
+  "documentation": "https://opencagedata.com/api",
+  "licenses": [
+    {
+      "name": "see attribution guide",
+      "url": "https://opencagedata.com/credits"
+    }
+  ],
+  "rate": {
+    "limit": 2500,
+    "remaining": 2428,
+    "reset": 1641254400
+  },
+  "results": [
+    {
+      "annotations": {
+        "DMS": {
+          "lat": "52° 31' 1.33140'' N",
+          "lng": "13° 23' 19.89564'' E"
+        },
+        "MGRS": "33UUU9067619766",
+        "Maidenhead": "JO62qm64pc",
+        "Mercator": {
+          "x": 1490441.066,
+          "y": 6860227.862
+        },
+        "OSM": {
+          "edit_url": "https://www.openstreetmap.org/edit?relation=62422#map=17/52.51704/13.38886",
+          "note_url": "https://www.openstreetmap.org/note/new#map=17/52.51704/13.38886&layers=N",
+          "url": "https://www.openstreetmap.org/?mlat=52.51704&mlon=13.38886#map=17/52.51704/13.38886"
+        },
+        "UN_M49": {
+          "regions": {
+            "DE": "276",
+            "EUROPE": "150",
+            "WESTERN_EUROPE": "155",
+            "WORLD": "001"
+          },
+          "statistical_groupings": [
+            "MEDC"
+          ]
+        },
+        "callingcode": 49,
+        "currency": {
+          "alternate_symbols": [],
+          "decimal_mark": ",",
+          "html_entity": "&#x20AC;",
+          "iso_code": "EUR",
+          "iso_numeric": "978",
+          "name": "Euro",
+          "smallest_denomination": 1,
+          "subunit": "Cent",
+          "subunit_to_unit": 100,
+          "symbol": "€",
+          "symbol_first": 0,
+          "thousands_separator": "."
+        },
+        "flag": "🇩🇪",
+        "geohash": "u33db8mmzj1t355u0c0j",
+        "qibla": 136.66,
+        "roadinfo": {
+          "drive_on": "right",
+          "speed_in": "km/h"
+        },
+        "sun": {
+          "rise": {
+            "apparent": 1641194280,
+            "astronomical": 1641186660,
+            "civil": 1641191820,
+            "nautical": 1641189180
+          },
+          "set": {
+            "apparent": 1641222300,
+            "astronomical": 1641229860,
+            "civil": 1641224760,
+            "nautical": 1641227340
+          }
+        },
+        "timezone": {
+          "name": "Europe/Berlin",
+          "now_in_dst": 0,
+          "offset_sec": 3600,
+          "offset_string": "+0100",
+          "short_name": "CET"
+        },
+        "what3words": {
+          "words": "third.gurgled.such"
+        },
+        "wikidata": "Q64"
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 52.6755087,
+          "lng": 13.7611609
+        },
+        "southwest": {
+          "lat": 52.3382448,
+          "lng": 13.088345
+        }
+      },
+      "components": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "_category": "place",
+        "_type": "city",
+        "city": "Berlin",
+        "continent": "Europe",
+        "country": "Germany",
+        "country_code": "de",
+        "political_union": "European Union",
+        "state": "Berlin",
+        "state_code": "BE"
+      },
+      "confidence": 2,
+      "formatted": "Berlin, Germany",
+      "geometry": {
+        "lat": 52.5170365,
+        "lng": 13.3888599
+      }
+    },
+    {
+      "annotations": {
+        "DMS": {
+          "lat": "44° 28' 7.96620'' N",
+          "lng": "71° 11' 1.15692'' W"
+        },
+        "FIPS": {
+          "county": "33007",
+          "state": "33"
+        },
+        "MGRS": "19TCK2631126271",
+        "Maidenhead": "FN44jl72xm",
+        "Mercator": {
+          "x": -7924128.194,
+          "y": 5508347.947
+        },
+        "OSM": {
+          "edit_url": "https://www.openstreetmap.org/edit?relation=170184#map=17/44.46888/-71.18365",
+          "note_url": "https://www.openstreetmap.org/note/new#map=17/44.46888/-71.18365&layers=N",
+          "url": "https://www.openstreetmap.org/?mlat=44.46888&mlon=-71.18365#map=17/44.46888/-71.18365"
+        },
+        "UN_M49": {
+          "regions": {
+            "AMERICAS": "019",
+            "NORTHERN_AMERICA": "021",
+            "US": "840",
+            "WORLD": "001"
+          },
+          "statistical_groupings": [
+            "MEDC"
+          ]
+        },
+        "callingcode": 1,
+        "currency": {
+          "alternate_symbols": [
+            "US$"
+          ],
+          "decimal_mark": ".",
+          "disambiguate_symbol": "US$",
+          "html_entity": "$",
+          "iso_code": "USD",
+          "iso_numeric": "840",
+          "name": "United States Dollar",
+          "smallest_denomination": 1,
+          "subunit": "Cent",
+          "subunit_to_unit": 100,
+          "symbol": "$",
+          "symbol_first": 1,
+          "thousands_separator": ","
+        },
+        "flag": "🇺🇸",
+        "geohash": "drvkupm9uxgyz1vupgwb",
+        "qibla": 60.36,
+        "roadinfo": {
+          "drive_on": "right",
+          "speed_in": "mph"
+        },
+        "sun": {
+          "rise": {
+            "apparent": 1641212520,
+            "astronomical": 1641206220,
+            "civil": 1641210540,
+            "nautical": 1641208320
+          },
+          "set": {
+            "apparent": 1641244620,
+            "astronomical": 1641250920,
+            "civil": 1641246600,
+            "nautical": 1641248820
+          }
+        },
+        "timezone": {
+          "name": "America/New_York",
+          "now_in_dst": 0,
+          "offset_sec": -18000,
+          "offset_string": "-0500",
+          "short_name": "EST"
+        },
+        "what3words": {
+          "words": "mile.loads.salon"
+        },
+        "wikidata": "Q821244"
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 44.528436,
+          "lng": -71.123642
+        },
+        "southwest": {
+          "lat": 44.445057,
+          "lng": -71.397858
+        }
+      },
+      "components": {
+        "ISO_3166-1_alpha-2": "US",
+        "ISO_3166-1_alpha-3": "USA",
+        "_category": "place",
+        "_type": "city",
+        "continent": "North America",
+        "country": "United States",
+        "country_code": "us",
+        "county": "Coos County",
+        "postcode": "03570",
+        "state": "New Hampshire",
+        "state_code": "NH",
+        "town": "Berlin"
+      },
+      "confidence": 5,
+      "formatted": "Berlin, NH 03570, United States of America",
+      "geometry": {
+        "lat": 44.4688795,
+        "lng": -71.1836547
+      }
+    },
+    {
+      "annotations": {
+        "DMS": {
+          "lat": "39° 45' 32.17932'' N",
+          "lng": "89° 54' 11.38860'' W"
+        },
+        "FIPS": {
+          "county": "17167",
+          "state": "17"
+        },
+        "MGRS": "16SBK5129805033",
+        "Maidenhead": "EM59bs12od",
+        "Mercator": {
+          "x": -10007974.382,
+          "y": 4803640.851
+        },
+        "OSM": {
+          "edit_url": "https://www.openstreetmap.org/edit?relation=126290#map=17/39.75894/-89.90316",
+          "note_url": "https://www.openstreetmap.org/note/new#map=17/39.75894/-89.90316&layers=N",
+          "url": "https://www.openstreetmap.org/?mlat=39.75894&mlon=-89.90316#map=17/39.75894/-89.90316"
+        },
+        "UN_M49": {
+          "regions": {
+            "AMERICAS": "019",
+            "NORTHERN_AMERICA": "021",
+            "US": "840",
+            "WORLD": "001"
+          },
+          "statistical_groupings": [
+            "MEDC"
+          ]
+        },
+        "callingcode": 1,
+        "currency": {
+          "alternate_symbols": [
+            "US$"
+          ],
+          "decimal_mark": ".",
+          "disambiguate_symbol": "US$",
+          "html_entity": "$",
+          "iso_code": "USD",
+          "iso_numeric": "840",
+          "name": "United States Dollar",
+          "smallest_denomination": 1,
+          "subunit": "Cent",
+          "subunit_to_unit": 100,
+          "symbol": "$",
+          "symbol_first": 1,
+          "thousands_separator": ","
+        },
+        "flag": "🇺🇸",
+        "geohash": "dp044jys87qe8cu91khu",
+        "qibla": 47.27,
+        "roadinfo": {
+          "drive_on": "right",
+          "speed_in": "mph"
+        },
+        "sun": {
+          "rise": {
+            "apparent": 1641216120,
+            "astronomical": 1641210300,
+            "civil": 1641214320,
+            "nautical": 1641212280
+          },
+          "set": {
+            "apparent": 1641250020,
+            "astronomical": 1641169440,
+            "civil": 1641251820,
+            "nautical": 1641253860
+          }
+        },
+        "timezone": {
+          "name": "America/Chicago",
+          "now_in_dst": 0,
+          "offset_sec": -21600,
+          "offset_string": "-0600",
+          "short_name": "CST"
+        },
+        "what3words": {
+          "words": "scouting.forum.whispering"
+        },
+        "wikidata": "Q2504681"
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 39.764932,
+          "lng": -89.893165
+        },
+        "southwest": {
+          "lat": 39.750371,
+          "lng": -89.912101
+        }
+      },
+      "components": {
+        "ISO_3166-1_alpha-2": "US",
+        "ISO_3166-1_alpha-3": "USA",
+        "_category": "place",
+        "_type": "village",
+        "continent": "North America",
+        "country": "United States",
+        "country_code": "us",
+        "county": "Sangamon County",
+        "state": "Illinois",
+        "state_code": "IL",
+        "village": "Berlin"
+      },
+      "confidence": 8,
+      "formatted": "Berlin, Sangamon County, Illinois, United States of America",
+      "geometry": {
+        "lat": 39.7589387,
+        "lng": -89.9031635
+      }
+    },
+    {
+      "annotations": {
+        "DMS": {
+          "lat": "41° 37' 17.35680'' N",
+          "lng": "72° 44' 44.34684'' W"
+        },
+        "FIPS": {
+          "county": "09003",
+          "state": "09"
+        },
+        "MGRS": "18TXM8780710206",
+        "Maidenhead": "FN31po09md",
+        "Mercator": {
+          "x": -8098008.927,
+          "y": 5076059.694
+        },
+        "OSM": {
+          "edit_url": "https://www.openstreetmap.org/edit?relation=11042445#map=17/41.62149/-72.74565",
+          "note_url": "https://www.openstreetmap.org/note/new#map=17/41.62149/-72.74565&layers=N",
+          "url": "https://www.openstreetmap.org/?mlat=41.62149&mlon=-72.74565#map=17/41.62149/-72.74565"
+        },
+        "UN_M49": {
+          "regions": {
+            "AMERICAS": "019",
+            "NORTHERN_AMERICA": "021",
+            "US": "840",
+            "WORLD": "001"
+          },
+          "statistical_groupings": [
+            "MEDC"
+          ]
+        },
+        "callingcode": 1,
+        "currency": {
+          "alternate_symbols": [
+            "US$"
+          ],
+          "decimal_mark": ".",
+          "disambiguate_symbol": "US$",
+          "html_entity": "$",
+          "iso_code": "USD",
+          "iso_numeric": "840",
+          "name": "United States Dollar",
+          "smallest_denomination": 1,
+          "subunit": "Cent",
+          "subunit_to_unit": 100,
+          "symbol": "$",
+          "symbol_first": 1,
+          "thousands_separator": ","
+        },
+        "flag": "🇺🇸",
+        "geohash": "drkkb8unxrwqyhztwm4q",
+        "qibla": 59.3,
+        "roadinfo": {
+          "drive_on": "right",
+          "speed_in": "mph"
+        },
+        "sun": {
+          "rise": {
+            "apparent": 1641212340,
+            "astronomical": 1641206340,
+            "civil": 1641210480,
+            "nautical": 1641208380
+          },
+          "set": {
+            "apparent": 1641245580,
+            "astronomical": 1641251520,
+            "civil": 1641247440,
+            "nautical": 1641249540
+          }
+        },
+        "timezone": {
+          "name": "America/New_York",
+          "now_in_dst": 0,
+          "offset_sec": -18000,
+          "offset_string": "-0500",
+          "short_name": "EST"
+        },
+        "what3words": {
+          "words": "frosts.crowds.reef"
+        },
+        "wikidata": "Q821199"
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 41.6527197,
+          "lng": -72.7111349
+        },
+        "southwest": {
+          "lat": 41.554197,
+          "lng": -72.8402567
+        }
+      },
+      "components": {
+        "ISO_3166-1_alpha-2": "US",
+        "ISO_3166-1_alpha-3": "USA",
+        "_category": "place",
+        "_type": "city",
+        "continent": "North America",
+        "country": "United States",
+        "country_code": "us",
+        "county": "Hartford County",
+        "state": "Connecticut",
+        "state_code": "CT",
+        "town": "Berlin"
+      },
+      "confidence": 6,
+      "formatted": "Berlin, Connecticut, United States of America",
+      "geometry": {
+        "lat": 41.621488,
+        "lng": -72.7456519
+      }
+    },
+    {
+      "annotations": {
+        "DMS": {
+          "lat": "38° 19' 21.41544'' N",
+          "lng": "75° 13' 3.68112'' W"
+        },
+        "FIPS": {
+          "county": "24047",
+          "state": "24"
+        },
+        "MGRS": "18SVH8097141633",
+        "Maidenhead": "FM28jh37vk",
+        "Mercator": {
+          "x": -8373194.86,
+          "y": 4598602.233
+        },
+        "OSM": {
+          "edit_url": "https://www.openstreetmap.org/edit?relation=133689#map=17/38.32262/-75.21769",
+          "note_url": "https://www.openstreetmap.org/note/new#map=17/38.32262/-75.21769&layers=N",
+          "url": "https://www.openstreetmap.org/?mlat=38.32262&mlon=-75.21769#map=17/38.32262/-75.21769"
+        },
+        "UN_M49": {
+          "regions": {
+            "AMERICAS": "019",
+            "NORTHERN_AMERICA": "021",
+            "US": "840",
+            "WORLD": "001"
+          },
+          "statistical_groupings": [
+            "MEDC"
+          ]
+        },
+        "callingcode": 1,
+        "currency": {
+          "alternate_symbols": [
+            "US$"
+          ],
+          "decimal_mark": ".",
+          "disambiguate_symbol": "US$",
+          "html_entity": "$",
+          "iso_code": "USD",
+          "iso_numeric": "840",
+          "name": "United States Dollar",
+          "smallest_denomination": 1,
+          "subunit": "Cent",
+          "subunit_to_unit": 100,
+          "symbol": "$",
+          "symbol_first": 1,
+          "thousands_separator": ","
+        },
+        "flag": "🇺🇸",
+        "geohash": "dqfd02kjkv3c6dwm8g5s",
+        "qibla": 57.81,
+        "roadinfo": {
+          "drive_on": "right",
+          "speed_in": "mph"
+        },
+        "sun": {
+          "rise": {
+            "apparent": 1641212340,
+            "astronomical": 1641206700,
+            "civil": 1641210600,
+            "nautical": 1641208620
+          },
+          "set": {
+            "apparent": 1641246720,
+            "astronomical": 1641252420,
+            "civil": 1641248520,
+            "nautical": 1641250500
+          }
+        },
+        "timezone": {
+          "name": "America/New_York",
+          "now_in_dst": 0,
+          "offset_sec": -18000,
+          "offset_string": "-0500",
+          "short_name": "EST"
+        },
+        "what3words": {
+          "words": "floral.evenly.shortwave"
+        },
+        "wikidata": "Q614184"
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 38.3548822,
+          "lng": -75.1879835
+        },
+        "southwest": {
+          "lat": 38.3087194,
+          "lng": -75.2344915
+        }
+      },
+      "components": {
+        "ISO_3166-1_alpha-2": "US",
+        "ISO_3166-1_alpha-3": "USA",
+        "_category": "place",
+        "_type": "village",
+        "continent": "North America",
+        "country": "United States",
+        "country_code": "us",
+        "county": "Worcester County",
+        "state": "Maryland",
+        "state_code": "MD",
+        "village": "Berlin"
+      },
+      "confidence": 7,
+      "formatted": "Berlin, Worcester County, Maryland, United States of America",
+      "geometry": {
+        "lat": 38.3226154,
+        "lng": -75.2176892
+      }
+    },
+    {
+      "annotations": {
+        "DMS": {
+          "lat": "44° 12' 36.27324'' N",
+          "lng": "72° 36' 12.25764'' W"
+        },
+        "FIPS": {
+          "county": "50023",
+          "state": "50"
+        },
+        "MGRS": "18TXP9146797998",
+        "Maidenhead": "FN34qf70ok",
+        "Mercator": {
+          "x": -8082174.068,
+          "y": 5468204.6
+        },
+        "OSM": {
+          "edit_url": "https://www.openstreetmap.org/edit?relation=8898132#map=17/44.21008/-72.60340",
+          "note_url": "https://www.openstreetmap.org/note/new#map=17/44.21008/-72.60340&layers=N",
+          "url": "https://www.openstreetmap.org/?mlat=44.21008&mlon=-72.60340#map=17/44.21008/-72.60340"
+        },
+        "UN_M49": {
+          "regions": {
+            "AMERICAS": "019",
+            "NORTHERN_AMERICA": "021",
+            "US": "840",
+            "WORLD": "001"
+          },
+          "statistical_groupings": [
+            "MEDC"
+          ]
+        },
+        "callingcode": 1,
+        "currency": {
+          "alternate_symbols": [
+            "US$"
+          ],
+          "decimal_mark": ".",
+          "disambiguate_symbol": "US$",
+          "html_entity": "$",
+          "iso_code": "USD",
+          "iso_numeric": "840",
+          "name": "United States Dollar",
+          "smallest_denomination": 1,
+          "subunit": "Cent",
+          "subunit_to_unit": 100,
+          "symbol": "$",
+          "symbol_first": 1,
+          "thousands_separator": ","
+        },
+        "flag": "🇺🇸",
+        "geohash": "dru7eb5y653rny3vp3ww",
+        "qibla": 59.37,
+        "roadinfo": {
+          "drive_on": "right",
+          "speed_in": "mph"
+        },
+        "sun": {
+          "rise": {
+            "apparent": 1641212820,
+            "astronomical": 1641206520,
+            "civil": 1641210840,
+            "nautical": 1641208620
+          },
+          "set": {
+            "apparent": 1641245040,
+            "astronomical": 1641251280,
+            "civil": 1641247020,
+            "nautical": 1641249180
+          }
+        },
+        "timezone": {
+          "name": "America/New_York",
+          "now_in_dst": 0,
+          "offset_sec": -18000,
+          "offset_string": "-0500",
+          "short_name": "EST"
+        },
+        "what3words": {
+          "words": "grooves.fearfully.classic"
+        },
+        "wikidata": "Q821245"
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 44.2719667,
+          "lng": -72.5197921
+        },
+        "southwest": {
+          "lat": 44.1547824,
+          "lng": -72.6836842
+        }
+      },
+      "components": {
+        "ISO_3166-1_alpha-2": "US",
+        "ISO_3166-1_alpha-3": "USA",
+        "_category": "place",
+        "_type": "city",
+        "city": "Berlin",
+        "continent": "North America",
+        "country": "United States",
+        "country_code": "us",
+        "county": "Washington County",
+        "state": "Vermont",
+        "state_code": "VT"
+      },
+      "confidence": 6,
+      "formatted": "Berlin, Vermont, United States of America",
+      "geometry": {
+        "lat": 44.2100759,
+        "lng": -72.6034049
+      }
+    },
+    {
+      "annotations": {
+        "DMS": {
+          "lat": "46° 22' 42.89628'' N",
+          "lng": "98° 29' 23.34588'' W"
+        },
+        "FIPS": {
+          "county": "38045",
+          "state": "38"
+        },
+        "MGRS": "14TNS3923436238",
+        "Maidenhead": "EN06sj10fu",
+        "Mercator": {
+          "x": -10963836.421,
+          "y": 5810280.584
+        },
+        "OSM": {
+          "edit_url": "https://www.openstreetmap.org/edit?relation=181615#map=17/46.37858/-98.48982",
+          "note_url": "https://www.openstreetmap.org/note/new#map=17/46.37858/-98.48982&layers=N",
+          "url": "https://www.openstreetmap.org/?mlat=46.37858&mlon=-98.48982#map=17/46.37858/-98.48982"
+        },
+        "UN_M49": {
+          "regions": {
+            "AMERICAS": "019",
+            "NORTHERN_AMERICA": "021",
+            "US": "840",
+            "WORLD": "001"
+          },
+          "statistical_groupings": [
+            "MEDC"
+          ]
+        },
+        "callingcode": 1,
+        "currency": {
+          "alternate_symbols": [
+            "US$"
+          ],
+          "decimal_mark": ".",
+          "disambiguate_symbol": "US$",
+          "html_entity": "$",
+          "iso_code": "USD",
+          "iso_numeric": "840",
+          "name": "United States Dollar",
+          "smallest_denomination": 1,
+          "subunit": "Cent",
+          "subunit_to_unit": 100,
+          "symbol": "$",
+          "symbol_first": 1,
+          "thousands_separator": ","
+        },
+        "flag": "🇺🇸",
+        "geohash": "cb1zyfcyufkesxxw9ch5",
+        "qibla": 39.34,
+        "roadinfo": {
+          "drive_on": "right",
+          "speed_in": "mph"
+        },
+        "sun": {
+          "rise": {
+            "apparent": 1641219480,
+            "astronomical": 1641212940,
+            "civil": 1641217380,
+            "nautical": 1641215160
+          },
+          "set": {
+            "apparent": 1641250800,
+            "astronomical": 1641170880,
+            "civil": 1641252840,
+            "nautical": 1641168720
+          }
+        },
+        "timezone": {
+          "name": "America/Chicago",
+          "now_in_dst": 0,
+          "offset_sec": -21600,
+          "offset_string": "-0600",
+          "short_name": "CST"
+        },
+        "what3words": {
+          "words": "adults.allocation.ironclad"
+        },
+        "wikidata": "Q821229"
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 46.380854,
+          "lng": -98.484052
+        },
+        "southwest": {
+          "lat": 46.376668,
+          "lng": -98.494593
+        }
+      },
+      "components": {
+        "ISO_3166-1_alpha-2": "US",
+        "ISO_3166-1_alpha-3": "USA",
+        "_category": "place",
+        "_type": "hamlet",
+        "continent": "North America",
+        "country": "United States",
+        "country_code": "us",
+        "county": "LaMoure County",
+        "hamlet": "Berlin",
+        "state": "North Dakota",
+        "state_code": "ND"
+      },
+      "confidence": 9,
+      "formatted": "Berlin, LaMoure County, North Dakota, United States of America",
+      "geometry": {
+        "lat": 46.3785823,
+        "lng": -98.4898183
+      }
+    },
+    {
+      "annotations": {
+        "DMS": {
+          "lat": "39° 47' 28.41432'' N",
+          "lng": "74° 55' 44.59296'' W"
+        },
+        "FIPS": {
+          "county": "34007",
+          "state": "34"
+        },
+        "MGRS": "18SWK0607404588",
+        "Maidenhead": "FM29ms89mv",
+        "Mercator": {
+          "x": -8341064.092,
+          "y": 4808298.871
+        },
+        "OSM": {
+          "edit_url": "https://www.openstreetmap.org/edit?relation=170680#map=17/39.79123/-74.92905",
+          "note_url": "https://www.openstreetmap.org/note/new#map=17/39.79123/-74.92905&layers=N",
+          "url": "https://www.openstreetmap.org/?mlat=39.79123&mlon=-74.92905#map=17/39.79123/-74.92905"
+        },
+        "UN_M49": {
+          "regions": {
+            "AMERICAS": "019",
+            "NORTHERN_AMERICA": "021",
+            "US": "840",
+            "WORLD": "001"
+          },
+          "statistical_groupings": [
+            "MEDC"
+          ]
+        },
+        "callingcode": 1,
+        "currency": {
+          "alternate_symbols": [
+            "US$"
+          ],
+          "decimal_mark": ".",
+          "disambiguate_symbol": "US$",
+          "html_entity": "$",
+          "iso_code": "USD",
+          "iso_numeric": "840",
+          "name": "United States Dollar",
+          "smallest_denomination": 1,
+          "subunit": "Cent",
+          "subunit_to_unit": 100,
+          "symbol": "$",
+          "symbol_first": 1,
+          "thousands_separator": ","
+        },
+        "flag": "🇺🇸",
+        "geohash": "dr4dqgy2dw0juru53e8c",
+        "qibla": 57.91,
+        "roadinfo": {
+          "drive_on": "right",
+          "speed_in": "mph"
+        },
+        "sun": {
+          "rise": {
+            "apparent": 1641212520,
+            "astronomical": 1641206700,
+            "civil": 1641210720,
+            "nautical": 1641208680
+          },
+          "set": {
+            "apparent": 1641246420,
+            "astronomical": 1641252180,
+            "civil": 1641248220,
+            "nautical": 1641250260
+          }
+        },
+        "timezone": {
+          "name": "America/New_York",
+          "now_in_dst": 0,
+          "offset_sec": -18000,
+          "offset_string": "-0500",
+          "short_name": "EST"
+        },
+        "what3words": {
+          "words": "verdict.rushes.upgrading"
+        },
+        "wikidata": "Q1086827"
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 39.8091498,
+          "lng": -74.907959
+        },
+        "southwest": {
+          "lat": 39.77601,
+          "lng": -74.966113
+        }
+      },
+      "components": {
+        "ISO_3166-1_alpha-2": "US",
+        "ISO_3166-1_alpha-3": "USA",
+        "_category": "place",
+        "_type": "village",
+        "continent": "North America",
+        "country": "United States",
+        "country_code": "us",
+        "county": "Camden County",
+        "state": "New Jersey",
+        "state_code": "NJ",
+        "village": "Berlin"
+      },
+      "confidence": 7,
+      "formatted": "Berlin, Camden County, New Jersey, United States of America",
+      "geometry": {
+        "lat": 39.7912262,
+        "lng": -74.9290536
+      }
+    },
+    {
+      "annotations": {
+        "DMS": {
+          "lat": "42° 23' 2.04900'' N",
+          "lng": "71° 37' 57.15660'' W"
+        },
+        "FIPS": {
+          "county": "25027",
+          "state": "25"
+        },
+        "MGRS": "19TBG8328795759",
+        "Maidenhead": "FN42ej42cd",
+        "Mercator": {
+          "x": -7974098.267,
+          "y": 5189849.26
+        },
+        "OSM": {
+          "edit_url": "https://www.openstreetmap.org/edit?relation=1844156#map=17/42.38390/-71.63254",
+          "note_url": "https://www.openstreetmap.org/note/new#map=17/42.38390/-71.63254&layers=N",
+          "url": "https://www.openstreetmap.org/?mlat=42.38390&mlon=-71.63254#map=17/42.38390/-71.63254"
+        },
+        "UN_M49": {
+          "regions": {
+            "AMERICAS": "019",
+            "NORTHERN_AMERICA": "021",
+            "US": "840",
+            "WORLD": "001"
+          },
+          "statistical_groupings": [
+            "MEDC"
+          ]
+        },
+        "callingcode": 1,
+        "currency": {
+          "alternate_symbols": [
+            "US$"
+          ],
+          "decimal_mark": ".",
+          "disambiguate_symbol": "US$",
+          "html_entity": "$",
+          "iso_code": "USD",
+          "iso_numeric": "840",
+          "name": "United States Dollar",
+          "smallest_denomination": 1,
+          "subunit": "Cent",
+          "subunit_to_unit": 100,
+          "symbol": "$",
+          "symbol_first": 1,
+          "thousands_separator": ","
+        },
+        "flag": "🇺🇸",
+        "geohash": "drt11gyb0u04x1wbc76t",
+        "qibla": 60.04,
+        "roadinfo": {
+          "drive_on": "right",
+          "speed_in": "mph"
+        },
+        "sun": {
+          "rise": {
+            "apparent": 1641212220,
+            "astronomical": 1641206160,
+            "civil": 1641210300,
+            "nautical": 1641208200
+          },
+          "set": {
+            "apparent": 1641245160,
+            "astronomical": 1641251220,
+            "civil": 1641247080,
+            "nautical": 1641249180
+          }
+        },
+        "timezone": {
+          "name": "America/New_York",
+          "now_in_dst": 0,
+          "offset_sec": -18000,
+          "offset_string": "-0500",
+          "short_name": "EST"
+        },
+        "what3words": {
+          "words": "wires.examination.boom"
+        },
+        "wikidata": "Q524646"
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 42.4182323,
+          "lng": -71.5801342
+        },
+        "southwest": {
+          "lat": 42.3504652,
+          "lng": -71.6787662
+        }
+      },
+      "components": {
+        "ISO_3166-1_alpha-2": "US",
+        "ISO_3166-1_alpha-3": "USA",
+        "_category": "place",
+        "_type": "city",
+        "continent": "North America",
+        "country": "United States",
+        "country_code": "us",
+        "county": "Worcester County",
+        "postcode": "01503",
+        "state": "Massachusetts",
+        "state_code": "MA",
+        "town": "Berlin"
+      },
+      "confidence": 7,
+      "formatted": "Berlin, MA 01503, United States of America",
+      "geometry": {
+        "lat": 42.3839025,
+        "lng": -71.6325435
+      }
+    },
+    {
+      "annotations": {
+        "DMS": {
+          "lat": "48° 52' 46.57332'' N",
+          "lng": "2° 19' 37.28676'' E"
+        },
+        "MGRS": "31UDQ5065814290",
+        "Maidenhead": "JN18dv91fc",
+        "Mercator": {
+          "x": 259043.138,
+          "y": 6222251.062
+        },
+        "OSM": {
+          "edit_url": "https://www.openstreetmap.org/edit?node=331514770#map=17/48.87960/2.32702",
+          "note_url": "https://www.openstreetmap.org/note/new#map=17/48.87960/2.32702&layers=N",
+          "url": "https://www.openstreetmap.org/?mlat=48.87960&mlon=2.32702#map=17/48.87960/2.32702"
+        },
+        "UN_M49": {
+          "regions": {
+            "EUROPE": "150",
+            "FR": "250",
+            "WESTERN_EUROPE": "155",
+            "WORLD": "001"
+          },
+          "statistical_groupings": [
+            "MEDC"
+          ]
+        },
+        "callingcode": 33,
+        "currency": {
+          "alternate_symbols": [],
+          "decimal_mark": ",",
+          "html_entity": "&#x20AC;",
+          "iso_code": "EUR",
+          "iso_numeric": "978",
+          "name": "Euro",
+          "smallest_denomination": 1,
+          "subunit": "Cent",
+          "subunit_to_unit": 100,
+          "symbol": "€",
+          "symbol_first": 0,
+          "thousands_separator": "."
+        },
+        "flag": "🇫🇷",
+        "geohash": "u09whfq2rddctbd43kyn",
+        "qibla": 119.16,
+        "roadinfo": {
+          "drive_on": "right",
+          "road": "Rue d'Amsterdam",
+          "speed_in": "km/h"
+        },
+        "sun": {
+          "rise": {
+            "apparent": 1641195900,
+            "astronomical": 1641189000,
+            "civil": 1641193680,
+            "nautical": 1641191280
+          },
+          "set": {
+            "apparent": 1641225960,
+            "astronomical": 1641232860,
+            "civil": 1641228180,
+            "nautical": 1641230580
+          }
+        },
+        "timezone": {
+          "name": "Europe/Paris",
+          "now_in_dst": 0,
+          "offset_sec": 3600,
+          "offset_string": "+0100",
+          "short_name": "CET"
+        },
+        "what3words": {
+          "words": "spotted.handbook.custard"
+        },
+        "wikidata": "Q1866688"
+      },
+      "bounds": {
+        "northeast": {
+          "lat": 48.8796537,
+          "lng": 2.3270741
+        },
+        "southwest": {
+          "lat": 48.8795537,
+          "lng": 2.3269741
+        }
+      },
+      "components": {
+        "ISO_3166-1_alpha-2": "FR",
+        "ISO_3166-1_alpha-3": "FRA",
+        "_category": "transportation",
+        "_type": "railway",
+        "city": "Paris",
+        "city_block": "Quartier Saint-Georges",
+        "city_district": "Paris",
+        "continent": "Europe",
+        "country": "France",
+        "country_code": "fr",
+        "political_union": "European Union",
+        "postcode": "75009",
+        "railway": "Liège",
+        "region": "Metropolitan France",
+        "road": "Rue d'Amsterdam",
+        "state": "Ile-de-France",
+        "state_code": "IDF",
+        "suburb": "9th Arrondissement"
+      },
+      "confidence": 9,
+      "formatted": "Liège, Rue d'Amsterdam, 75009 Paris, France",
+      "geometry": {
+        "lat": 48.8796037,
+        "lng": 2.3270241
+      }
+    }
+  ],
+  "status": {
+    "code": 200,
+    "message": "OK"
+  },
+  "stay_informed": {
+    "blog": "https://blog.opencagedata.com",
+    "twitter": "https://twitter.com/OpenCage"
+  },
+  "thanks": "For using an OpenCage API",
+  "timestamp": {
+    "created_http": "Mon, 03 Jan 2022 22:02:38 GMT",
+    "created_unix": 1641247358
+  },
+  "total_results": 10
+}

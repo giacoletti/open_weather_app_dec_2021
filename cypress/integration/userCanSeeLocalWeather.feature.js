@@ -60,5 +60,17 @@ describe('User visiting the application, can see home view', () => {
         .should('contain.text', 'Feels like: 0°C')
         .and('be.visible');
     });
+
+    it('is expected to display Humidity', () => {
+      cy.get('[data-cy=weather-humidity]')
+        .should('contain.text', 'Humidity: 94%')
+        .and('be.visible');
+    });
+
+    it('is expected to display Wind speed', () => {
+      cy.get('[data-cy=weather-wind-speed]')
+        .should('contain.text', 'Wind speed: 2.4 m/sec')
+        .and('be.visible');
+    });
   });
 });

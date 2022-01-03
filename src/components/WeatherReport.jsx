@@ -20,7 +20,8 @@ const WeatherReport = () => {
   const [weatherInfo, setWeatherInfo] = useState({});
 
   const getUserLocationAndWeather = async () => {
-    let city, temperature, feelsLike, icon, description, updateTime;
+    let city, temperature, feelsLike, icon, description, updateTime,
+      humidity, windSpeed;
     const geolocationResponse = await Geolocation.getCoordinates();
     if (geolocationResponse.latitude) {
       const openCageResponse = await OpenCageAPI.getCity(
@@ -48,6 +49,8 @@ const WeatherReport = () => {
           '.png';
         description = openWeatherResponse.current.weather[0].description;
         description = description.charAt(0).toUpperCase() + description.slice(1);
+        humidity = openWeatherResponse.current.humidity + '%';        
+        windSpeed = openWeatherResponse.current.wind_speed + ' m/sec';        
       }
       setWeatherInfo({
         updateTime,
@@ -55,7 +58,9 @@ const WeatherReport = () => {
         temperature,
         feelsLike,
         icon,
-        description
+        description,
+        humidity,
+        windSpeed
       });
     }
   };
@@ -114,6 +119,16 @@ const WeatherReport = () => {
               <h3 data-cy="weather-temperature">
                 {weatherInfo.temperature} <Chip data-cy="weather-feels-like" label={`Feels like: ${weatherInfo.feelsLike}`} />
               </h3>
+            </Grid>
+          </Grid>
+          <Grid container alignItems="center">
+            <Grid item>
+              <Chip data-cy="weather-humidity" 
+                label={`Humidity: ${weatherInfo.humidity}`} sx={{ margin: '2px' }}/>
+            </Grid>
+            <Grid item>
+              <Chip data-cy="weather-wind-speed"  
+                label={`Wind speed: ${weatherInfo.windSpeed}`} sx={{ margin: '2px' }}/>
             </Grid>
           </Grid>
         </>

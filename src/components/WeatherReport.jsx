@@ -3,6 +3,7 @@ import Geolocation from '../modules/Geolocation';
 import OpenCageAPI from '../modules/OpenCageAPI';
 import OpenWeatherAPI from '../modules/OpenWeatherAPI';
 import TimeParser from '../modules/TimeParser';
+import { parseTemperature } from '../modules/utils';
 import {
   Card,
   CardContent,
@@ -17,11 +18,6 @@ import ThermostatIcon from '@mui/icons-material/Thermostat';
 
 const WeatherReport = () => {
   const [weatherInfo, setWeatherInfo] = useState({});
-
-  const parseTemperature = (temp) => {
-    const temperature = parseFloat(temp.toFixed(1));
-    return `${temperature}°C`;
-  }
 
   const getUserLocationAndWeather = async () => {
     let city, temperature, feelsLike, icon, description, updateTime;

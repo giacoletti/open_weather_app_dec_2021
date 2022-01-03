@@ -11,13 +11,15 @@ import {
   Avatar,
   Grid,
   CircularProgress,
-  Chip
+  Chip,
+  Button
 } from '@mui/material';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import ThermostatIcon from '@mui/icons-material/Thermostat';
 
 const WeatherReport = () => {
   const [weatherInfo, setWeatherInfo] = useState({});
+  const [showCitySearch, setShowCitySearch] = useState(false);
 
   const getUserLocationAndWeather = async () => {
     let city, temperature, feelsLike, icon, description, updateTime,
@@ -129,6 +131,12 @@ const WeatherReport = () => {
             <Grid item>
               <Chip data-cy="weather-wind-speed"  
                 label={`Wind speed: ${weatherInfo.windSpeed}`} />
+            </Grid>
+            <Grid item sx={{ margin: 'auto', marginTop: '14px' }}>
+              { !showCitySearch &&
+                <Button data-cy="change-city-btn"
+                  onClick={()=>{setShowCitySearch(true)}} variant="contained">Change city</Button>
+              }
             </Grid>
           </Grid>
         </>

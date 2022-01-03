@@ -26,6 +26,10 @@ describe('User can click a button and display search input', () => {
     cy.get('[data-cy=change-city-btn]').click();
   });
 
+  it('is expected to hide "Change City" button', () => {
+    cy.get('[data-cy=change-city-btn]').should('not.exist');
+  });
+
   it('is expected to display search input', () => {
     cy.get('[data-cy=search-input-city]').should('be.visible');
   });
@@ -34,7 +38,7 @@ describe('User can click a button and display search input', () => {
     cy.get('[data-cy=search-city-btn]')
       .should('contain.text', 'Search')
       .and('be.visible');
-    });
+  });
 
   describe('user can look for the weather in a different city', () => {
     before(() => {

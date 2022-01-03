@@ -81,13 +81,13 @@ const WeatherReport = () => {
           <Typography variant="caption" display="block" align="right">
             {weatherInfo.updateTime}
           </Typography>
-          <Grid container alignItems="center">
-            <Grid item xs="auto">
+          <Grid container alignItems="center" justifyContent="center">
+            <Grid item>
               <Avatar aria-label="city">
                 <LocationCityIcon />
               </Avatar>
             </Grid>
-            <Grid item xs sx={{ paddingLeft: '5px' }}>
+            <Grid item sx={{ paddingLeft: '5px' }}>
               <h1 data-cy="weather-city" style={{ fontWeight: 400 }}>
                {weatherInfo.city}
               </h1>
@@ -101,34 +101,34 @@ const WeatherReport = () => {
         </Grid>
       ) : (
         <>
-          <Grid container alignItems="center">
-            <Grid item xs="auto">
+          <Grid container alignItems="center" justifyContent="center">
+            <Grid item>
               <img data-cy="weather-icon" src={weatherInfo.icon} alt="" />
             </Grid>
-            <Grid item xs>
+            <Grid item>
               <Typography data-cy="weather-description" variant="h5" component="div">
                 {weatherInfo.description}
               </Typography>
             </Grid>
           </Grid>
-          <Grid container alignItems="center">
-            <Grid item xs="auto">
+          <Grid container alignItems="center" justifyContent="center">
+            <Grid item>
               <ThermostatIcon data-cy="temperature-icon"/>
             </Grid>
-            <Grid item xs>
+            <Grid item>
               <h3 data-cy="weather-temperature">
                 {weatherInfo.temperature} <Chip data-cy="weather-feels-like" label={`Feels like: ${weatherInfo.feelsLike}`} />
               </h3>
             </Grid>
           </Grid>
-          <Grid container alignItems="center">
+          <Grid container alignItems="center" justifyContent="center" spacing={1}>
             <Grid item>
               <Chip data-cy="weather-humidity" 
-                label={`Humidity: ${weatherInfo.humidity}`} sx={{ margin: '2px' }}/>
+                label={`Humidity: ${weatherInfo.humidity}`} />
             </Grid>
             <Grid item>
               <Chip data-cy="weather-wind-speed"  
-                label={`Wind speed: ${weatherInfo.windSpeed}`} sx={{ margin: '2px' }}/>
+                label={`Wind speed: ${weatherInfo.windSpeed}`} />
             </Grid>
           </Grid>
         </>

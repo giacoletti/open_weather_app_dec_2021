@@ -39,6 +39,8 @@ const WeatherReport = () => {
 
     if (openCageResponse.components.hamlet) {
       city = openCageResponse.components.hamlet + ` ${openCageResponse.annotations.flag}`;
+    } else if (openCageResponse.components.town) {
+      city = openCageResponse.components.town + ` ${openCageResponse.annotations.flag}`;
     } else {
       city = openCageResponse.components.city + ` ${openCageResponse.annotations.flag}`;
     }

@@ -7,7 +7,7 @@ Weather App built using the following APIs:
 
 ## Deployment
 
-WIP
+[Current Weather](https://currentweather-gi.netlify.app/)
 
 ## Dependencies
 

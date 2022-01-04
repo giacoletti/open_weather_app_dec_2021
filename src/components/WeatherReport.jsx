@@ -12,7 +12,8 @@ import {
   Grid,
   CircularProgress,
   Chip,
-  Button
+  Button,
+  TextField
 } from '@mui/material';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import ThermostatIcon from '@mui/icons-material/Thermostat';
@@ -133,9 +134,14 @@ const WeatherReport = () => {
                 label={`Wind speed: ${weatherInfo.windSpeed}`} />
             </Grid>
             <Grid item sx={{ margin: 'auto', marginTop: '14px' }}>
-              { !showCitySearch &&
+              { !showCitySearch ?
                 <Button data-cy="change-city-btn"
-                  onClick={()=>{setShowCitySearch(true)}} variant="contained">Change city</Button>
+                  onClick={()=>{setShowCitySearch(true)}} variant="contained">Change city</Button> :
+                <>
+                  <TextField data-cy="search-input-city" sx={{ maxWidth: '200px' }}
+                    size="small" label="Enter a city" />
+                  <Button data-cy="search-city-btn" variant="contained">Search</Button>
+                </>
               }
             </Grid>
           </Grid>

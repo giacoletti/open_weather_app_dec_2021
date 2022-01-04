@@ -8,63 +8,78 @@ import {
   Card,
   CardContent,
   Typography,
-  Avatar,
   Grid,
   CircularProgress,
   Chip,
   Button,
   TextField
 } from '@mui/material';
-import LocationCityIcon from '@mui/icons-material/LocationCity';
 import ThermostatIcon from '@mui/icons-material/Thermostat';
 
 const WeatherReport = () => {
   const [weatherInfo, setWeatherInfo] = useState({});
   const [showCitySearch, setShowCitySearch] = useState(false);
+  const [citySearch, setCitySearch] = useState();
 
   const getUserLocationAndWeather = async () => {
-    let city, temperature, feelsLike, icon, description, updateTime,
-      humidity, windSpeed;
     const geolocationResponse = await Geolocation.getCoordinates();
     if (geolocationResponse.latitude) {
-      const openCageResponse = await OpenCageAPI.getCity(
-        geolocationResponse.latitude,
-        geolocationResponse.longitude
-      );
+      getWeatherReport(geolocationResponse.latitude, geolocationResponse.longitude)
+    }
+  };
 
-      if (openCageResponse.hamlet) {
-        city = openCageResponse.hamlet;
-      } else {
-        city = openCageResponse.city;
-      }
+  const getWeatherReport = async (latitude, longitude) => {
+    let city, temperature, feelsLike, icon, description, updateTime,
+      humidity, windSpeed;
 
-      const openWeatherResponse = await OpenWeatherAPI.getCurrentAndForecastWeather(
-        geolocationResponse.latitude,
-        geolocationResponse.longitude
-      );
+    const openCageResponse = await OpenCageAPI.getCity(
+      latitude,
+      longitude
+    );
 
-      if (openWeatherResponse.current) {
-        updateTime = TimeParser.unixToClockTime(openWeatherResponse.current.dt);
-        temperature = parseTemperature(openWeatherResponse.current.temp);
-        feelsLike = parseTemperature(openWeatherResponse.current.feels_like);
-        icon = 'https://openweathermap.org/img/wn/' +
-          openWeatherResponse.current.weather[0].icon +
-          '.png';
-        description = openWeatherResponse.current.weather[0].description;
-        description = description.charAt(0).toUpperCase() + description.slice(1);
-        humidity = openWeatherResponse.current.humidity + '%';        
-        windSpeed = openWeatherResponse.current.wind_speed + ' m/sec';        
-      }
-      setWeatherInfo({
-        updateTime,
-        city,
-        temperature,
-        feelsLike,
-        icon,
-        description,
-        humidity,
-        windSpeed
-      });
+    if (openCageResponse.components.hamlet) {
+      city = openCageResponse.components.hamlet + ` ${openCageResponse.annotations.flag}`;
+    } else {
+      city = openCageResponse.components.city + ` ${openCageResponse.annotations.flag}`;
+    }
+
+    const openWeatherResponse = await OpenWeatherAPI.getCurrentAndForecastWeather(
+      latitude,
+      longitude
+    );
+    
+    if (openWeatherResponse.current) {
+      updateTime = TimeParser.unixToClockTime(openWeatherResponse.current.dt);
+      temperature = parseTemperature(openWeatherResponse.current.temp);
+      feelsLike = parseTemperature(openWeatherResponse.current.feels_like);
+      icon = 'https://openweathermap.org/img/wn/' +
+        openWeatherResponse.current.weather[0].icon +
+        '.png';
+      description = openWeatherResponse.current.weather[0].description;
+      description = description.charAt(0).toUpperCase() + description.slice(1);
+      humidity = openWeatherResponse.current.humidity + '%';        
+      windSpeed = openWeatherResponse.current.wind_speed + ' m/sec';        
+    }
+    setWeatherInfo({
+      updateTime,
+      city,
+      temperature,
+      feelsLike,
+      icon,
+      description,
+      humidity,
+      windSpeed
+    });
+  }
+
+  const handleCityChange = (event) => {
+    setCitySearch(event.target.value);
+  };
+
+  const searchCityWeather = async () => {
+    const openCageResponse = await OpenCageAPI.getCoordinates(citySearch);
+    if (openCageResponse.lat) {
+      getWeatherReport(openCageResponse.lat, openCageResponse.lng);
     }
   };
 
@@ -86,11 +101,6 @@ const WeatherReport = () => {
           </Typography>
           <Grid container alignItems="center" justifyContent="center">
             <Grid item>
-              <Avatar aria-label="city">
-                <LocationCityIcon />
-              </Avatar>
-            </Grid>
-            <Grid item sx={{ paddingLeft: '5px' }}>
               <h1 data-cy="weather-city" style={{ fontWeight: 400 }}>
                {weatherInfo.city}
               </h1>
@@ -139,8 +149,9 @@ const WeatherReport = () => {
                   onClick={()=>{setShowCitySearch(true)}} variant="contained">Change city</Button> :
                 <>
                   <TextField data-cy="search-input-city" sx={{ maxWidth: '200px' }}
-                    size="small" label="Enter a city" />
-                  <Button data-cy="search-city-btn" variant="contained">Search</Button>
+                    onChange={handleCityChange} size="small" label="Enter a city" />
+                  <Button data-cy="search-city-btn" onClick={searchCityWeather}
+                    variant="contained">Search</Button>
                 </>
               }
             </Grid>

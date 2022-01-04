@@ -46,7 +46,7 @@ describe('User can click a button and display search input', () => {
         fixture: 'openCageBerlinResponse.json'
       }).as('getBerlinCoords');
       cy.intercept('GET', 'https://api.openweathermap.org/data/2.5/onecall**', {
-        fixture: 'openWeatherResponse.json'
+        fixture: 'openWeatherBerlinResponse.json'
       }).as('getBerlinWeather');
       cy.get('[data-cy=search-input-city]').type('Berlin');
       cy.get('[data-cy=search-city-btn]').click();

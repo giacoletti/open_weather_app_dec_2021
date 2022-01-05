@@ -14,6 +14,7 @@ import {
   TextField
 } from '@mui/material';
 import ThermostatIcon from '@mui/icons-material/Thermostat';
+import WeatherCity from './WeatherCity';
 import ErrorMessage from './ErrorMessage';
 
 const WeatherReport = () => {
@@ -25,7 +26,10 @@ const WeatherReport = () => {
   const getUserLocationAndWeather = async () => {
     const geolocationResponse = await Geolocation.getCoordinates();
     if (geolocationResponse.message) {
-      dispatch({ type: 'SET_ERROR_MESSAGE', payload: geolocationResponse.message });
+      dispatch({
+        type: 'SET_ERROR_MESSAGE',
+        payload: 'Please turn on your Location and refresh the page.'
+      });
     } else {
       getWeatherReport(geolocationResponse.latitude, geolocationResponse.longitude)
     }
@@ -65,18 +69,7 @@ const WeatherReport = () => {
             <CircularProgress />
           </Grid>
         ) : (
-          <>
-            <Typography variant="caption" display="block" align="right">
-              {weatherInfo.updateTime}
-            </Typography>
-            <Grid container alignItems="center" justifyContent="center">
-              <Grid item>
-                <h1 data-cy="weather-city" style={{ fontWeight: 400 }}>
-                 {weatherCity}
-                </h1>
-              </Grid>
-            </Grid>
-          </>
+          <WeatherCity />
         )}
         {!weatherInfo.temperature ? (
           <Grid>

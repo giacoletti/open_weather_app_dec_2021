@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Geolocation from '../modules/Geolocation';
 import OpenCageAPI from '../modules/OpenCageAPI';
 import OpenWeatherAPI from '../modules/OpenWeatherAPI';
-import TimeParser from '../modules/TimeParser';
-import { parseTemperature } from '../modules/utils';
 import {
   Card,
   CardContent,
@@ -17,7 +16,8 @@ import {
 import ThermostatIcon from '@mui/icons-material/Thermostat';
 
 const WeatherReport = () => {
-  const [weatherInfo, setWeatherInfo] = useState({});
+  const dispatch = useDispatch();
+  const { weatherCity, weatherInfo } = useSelector(state => state);
   const [showCitySearch, setShowCitySearch] = useState(false);
   const [citySearch, setCitySearch] = useState();
 
@@ -29,49 +29,12 @@ const WeatherReport = () => {
   };
 
   const getWeatherReport = async (latitude, longitude) => {
-    let city, temperature, feelsLike, icon, description, updateTime,
-      humidity, windSpeed;
+    dispatch(OpenCageAPI.getCity(latitude,longitude));
 
-    const openCageResponse = await OpenCageAPI.getCity(
-      latitude,
-      longitude
-    );
-
-    if (openCageResponse.components.hamlet) {
-      city = openCageResponse.components.hamlet + ` ${openCageResponse.annotations.flag}`;
-    } else if (openCageResponse.components.town) {
-      city = openCageResponse.components.town + ` ${openCageResponse.annotations.flag}`;
-    } else {
-      city = openCageResponse.components.city + ` ${openCageResponse.annotations.flag}`;
-    }
-
-    const openWeatherResponse = await OpenWeatherAPI.getCurrentAndForecastWeather(
-      latitude,
-      longitude
-    );
-    
-    if (openWeatherResponse.current) {
-      updateTime = TimeParser.unixToClockTime(openWeatherResponse.current.dt);
-      temperature = parseTemperature(openWeatherResponse.current.temp);
-      feelsLike = parseTemperature(openWeatherResponse.current.feels_like);
-      icon = 'https://openweathermap.org/img/wn/' +
-        openWeatherResponse.current.weather[0].icon +
-        '.png';
-      description = openWeatherResponse.current.weather[0].description;
-      description = description.charAt(0).toUpperCase() + description.slice(1);
-      humidity = openWeatherResponse.current.humidity + '%';        
-      windSpeed = openWeatherResponse.current.wind_speed + ' m/sec';        
-    }
-    setWeatherInfo({
-      updateTime,
-      city,
-      temperature,
-      feelsLike,
-      icon,
-      description,
-      humidity,
-      windSpeed
-    });
+    dispatch(OpenWeatherAPI.getCurrentAndForecastWeather(
+        latitude,
+        longitude
+      ));
   }
 
   const handleCityChange = (event) => {
@@ -92,7 +55,7 @@ const WeatherReport = () => {
   return (
     <Card sx={{ maxWidth: 345, boxShadow: 3 }}>
       <CardContent>
-      {!weatherInfo.city ? (
+      {!weatherCity ? (
         <Grid>
           <CircularProgress />
         </Grid>
@@ -104,7 +67,7 @@ const WeatherReport = () => {
           <Grid container alignItems="center" justifyContent="center">
             <Grid item>
               <h1 data-cy="weather-city" style={{ fontWeight: 400 }}>
-               {weatherInfo.city}
+               {weatherCity}
               </h1>
             </Grid>
           </Grid>

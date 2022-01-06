@@ -13,6 +13,8 @@ Weather App built using the following APIs:
 
 - Node.js
 - React.js
+- [React Redux](https://react-redux.js.org/)
+- [Redux Thunk](https://github.com/reduxjs/redux-thunk)
 - [Axios](https://axios-http.com/)
 - [Material UI](https://mui.com/)
 - [yarn](https://classic.yarnpkg.com/en/)
@@ -47,6 +49,7 @@ Runs the app with [Cypress](https://www.cypress.io/), the next generation front 
 
 - [Convert a Unix Timestamp to a Date in Vanilla JavaScript](https://coderrocketfuel.com/article/convert-a-unix-timestamp-to-a-date-in-vanilla-javascript)
 - [Thomas](https://github.com/tochman)
+- Browser tab icon made by [Freepik](https://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com/)
 
 ## License
 

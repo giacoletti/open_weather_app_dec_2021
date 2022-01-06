@@ -7,7 +7,7 @@ const WeatherCity = () => {
 
   return (
     <>
-      <Typography variant="caption" display="block" align="right">
+      <Typography data-cy="update-time" variant="caption" display="block" align="right">
         {weatherInfo.updateTime}
       </Typography>
       <Grid container alignItems="center" justifyContent="center">

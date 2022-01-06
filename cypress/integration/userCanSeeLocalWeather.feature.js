@@ -29,6 +29,12 @@ describe('User visiting the application, can see home view', () => {
   });
 
   describe("displays current weather based on user's location", () => {
+    it('is expected to display update time', () => {
+      cy.get('[data-cy=update-time]')
+        .should('contain.text', '16:24')
+        .and('be.visible');
+    });
+
     it('is expected to display city "Paradise City"', () => {
       cy.get('[data-cy=weather-city]')
         .should('contain.text', 'Paradise City')
@@ -70,6 +76,12 @@ describe('User visiting the application, can see home view', () => {
     it('is expected to display Wind speed', () => {
       cy.get('[data-cy=weather-wind-speed]')
         .should('contain.text', 'Wind speed: 2.4 m/sec')
+        .and('be.visible');
+    });
+
+    it('is expected to display button "Change city"', () => {
+      cy.get('[data-cy=change-city-btn]')
+        .should('contain.text', 'Change city')
         .and('be.visible');
     });
   });

@@ -53,6 +53,12 @@ describe('User can click a button and display search input', () => {
     });
 
     describe("displays current weather in Berlin", () => {
+      it('is expected to display update time', () => {
+        cy.get('[data-cy=update-time]')
+          .should('contain.text', '22:53')
+          .and('be.visible');
+      });
+
       it('is expected to display city "Berlin"', () => {
         cy.get('[data-cy=weather-city]')
           .should('contain.text', 'Berlin')
